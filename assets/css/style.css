@@ -1,0 +1,17 @@
+body { 
+  background: url(http://images.huffingtonpost.com/2016-05-09-1462819580-1765342-thumbnail_videogamecontrollers640.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1 {
+	color:#dbb427;
+}
+button {
+	background-color:#840002;
+	border:none;
+	padding: 10px;
+	margin: 5px;
+	color:white;
+}

@@ -1,5 +1,5 @@
 // Change the buttons!!!!!!! Pick A Topic!!!
-var buttons = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
+var buttons = ["Overwatch", "Resident Evil 5", "GTA V", "Battlefield 1", "Call of Duty", "Dishonored"];
 var request = "";
 var gData = false;
 var imageArray = [];
@@ -13,6 +13,8 @@ var apiCall = function() {
 	  url: queryURL,
 	  method: "GET"
 	}).done(function(response) {
+		$(".gif").empty();
+
 
 	  	var newGif = $("<div class='gif'>");
 
@@ -26,7 +28,7 @@ var apiCall = function() {
 	  		var rating = gData.data[i].rating;
 	  		var h1Temp = $("<h1>").text("Rating: " + rating);
 	  		newGif.append(h1Temp);
-	  		$("#stuffDisplay").prepend(newGif);
+			$("#stuffDisplay").prepend(newGif);
 	  	}
 	});
 }
@@ -45,6 +47,7 @@ var makeButtons = function() {
 $("#submit").on("click", function(event) {
 	event.preventDefault();
 	var choice = $("#textValue").val().trim();
+	$("#textValue").val("");
 	buttons.push(choice);
 	makeButtons();
 });
